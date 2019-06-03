@@ -5,7 +5,7 @@ class Scores{
 		int Total;
 		Total = Phy + Che + Mat;
 		
-		if (Phy == 0 || Che == 0 || Mat == 0){
+		if (Phy == -1 || Che == -1 || Mat == -1){
 			System.out.println("Please First Enter Valid Inputs For All Three Subjects Before Displaying Results");
 		}
 		else{
@@ -25,6 +25,7 @@ class Scores{
 		}
 		else{
 			System.out.println("Invalid Input For Physics");
+			Phy = -1;
 		}
 	}
 	public void Chemistry(int C){
@@ -33,6 +34,7 @@ class Scores{
 		}
 		else{
 			System.out.println("Invalid Input For Chemistry");
+			Che = -1;
 		}
 	}
 	public void Maths(int M){
@@ -41,6 +43,7 @@ class Scores{
 		}
 		else{
 			System.out.println("Invalid Input For Maths");
+			Mat = -1;
 		}
 	}
 }
@@ -50,9 +53,15 @@ class StopInvalidInput{
 		Scores Peter, James;
 		Peter = new Scores();
 		James = new Scores();
+		System.out.println("---Peter---");
 		Peter.Physics(1200);
 		Peter.Chemistry(89);
 		Peter.Maths(94);
 		Peter.ShowResults();
+		System.out.println("---James---");
+		James.Physics(134);
+		James.Chemistry(82);
+		James.Maths(107);
+		James.ShowResults();
 	}
 }
