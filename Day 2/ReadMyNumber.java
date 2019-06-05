@@ -1,5 +1,5 @@
 class ReadNumber{
-	static public String ones(int InputNum){
+	static private String ones(int InputNum){
 		switch(InputNum){
 			case 1: return "One"; 
 			case 2: return "Two";
@@ -24,7 +24,7 @@ class ReadNumber{
 		}
 	}
 
-	static public String tens(int InputNum){
+	static private String tens(int InputNum){
 		switch(InputNum){
 			case 20: return "Twenty"; 
 			case 30: return "Thirty"; 
@@ -41,6 +41,10 @@ class ReadNumber{
 	static public String MainBlock(int InputNum){
 	String Answer = "";
 	int LocalNum = 0;
+
+		if (InputNum == 0){
+			Answer = "Zero";
+		}
 
 		if (InputNum >= 1000 && InputNum <= 9999){
 			Answer += ReadNumber.ones(InputNum/1000) + " Thousand ";
@@ -67,7 +71,7 @@ class ReadNumber{
 
 class ReadMyNumber{
 	public static void main(String XYZ[]){
-		String Output = ReadNumber.MainBlock(7618);
+		String Output = ReadNumber.MainBlock(6026);
 		System.out.println(Output);
 	}
 
