@@ -23,8 +23,8 @@ class InherTwo extends InherOne{
 
 class InheritingConstructors{
 	public static void main(String XYZ[]){
-		InherTwo A = new InherTwo();
-		InherTwo B = new InherTwo(52);
-		InherTwo C = new InherTwo(62,72);
+		InherTwo A = new InherTwo();            // 2 | 3
+		InherTwo B = new InherTwo(52);          // 1 | 4
+		InherTwo C = new InherTwo(62,72);       // 2 | 3 | 5
 	}
 }
