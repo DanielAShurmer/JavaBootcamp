@@ -1,4 +1,5 @@
 class StringProcessing{
+	// Count the number of words in a string
 	public void WordCount(String Msg){
 		int WordsFound = 0;
 		int Counter = 0;
@@ -11,6 +12,7 @@ class StringProcessing{
 		System.out.println("There are " + (WordsFound + 1) + " words in your message.");
 	}
 
+	// Count the number of words in a string and return the result
 	public int ReturnWordCount(String Msg){
 		int WordsFound = 0;
 		int Counter = 0;
@@ -23,6 +25,7 @@ class StringProcessing{
 		return WordsFound;
 	}
 
+	// Print each word in a string on its own line
 	public void WordSplitter(String Msg){
 		int Counter = 0;
 		String CurrentWord = "";
