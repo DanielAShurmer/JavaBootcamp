@@ -14,76 +14,24 @@ class Ehandler implements ActionListener{
 		Button btnPressed = (Button) Trigger.getSource();
 		String chrPressed = btnPressed.getLabel();
 		
-		if (chrPressed.equals("0")) {
-			Display.setText(Display.getText() + "0");
+		if (chrPressed.equals("0") || chrPressed.equals("1") || chrPressed.equals("2") || chrPressed.equals("3")
+				|| chrPressed.equals("4") || chrPressed.equals("5") || chrPressed.equals("6") 
+				|| chrPressed.equals("7") || chrPressed.equals("8") || chrPressed.equals("9")) {
+			 
+			Display.setText(Display.getText() + chrPressed);
 		}
-		if (chrPressed.equals("1")) {
-			Display.setText(Display.getText() + "1");
-		}
-		if (chrPressed.equals("2")) {
-			Display.setText(Display.getText() + "2");
-		}
-		if (chrPressed.equals("3")) {
-			Display.setText(Display.getText() + "3");
-		}
-		if (chrPressed.equals("4")) {
-			Display.setText(Display.getText() + "4");
-		}
-		if (chrPressed.equals("5")) {
-			Display.setText(Display.getText() + "5");
-		}
-		if (chrPressed.equals("6")) {
-			Display.setText(Display.getText() + "6");
-		}
-		if (chrPressed.equals("7")) {
-			Display.setText(Display.getText() + "7");
-		}
-		if (chrPressed.equals("8")) {
-			Display.setText(Display.getText() + "8");
-		}
-		if (chrPressed.equals("9")) {
-			Display.setText(Display.getText() + "9");
-		}
-		if (chrPressed.equals("+")) {
+		
+		if (chrPressed.equals("+") || chrPressed.equals("-") || chrPressed.equals("X") || chrPressed.equals("/")){
 			try {
-			NumberStorage = Integer.parseInt(Display.getText());
-			Operation = "+";
-			Display.setText("");
-			}
-			catch(NumberFormatException Err) {
-				System.out.println("Error - Non-Numerical Character In Display");
-			}
+				NumberStorage = Integer.parseInt(Display.getText());
+				Operation = chrPressed;
+				Display.setText("");
+				}
+				catch(NumberFormatException Err) {
+					System.out.println("Error - Non-Numerical Character In Display");
+				}
 		}
-		if (chrPressed.equals("-")) {
-			try {
-			NumberStorage = Integer.parseInt(Display.getText());
-			Operation = "-";
-			Display.setText("");
-			}
-			catch(NumberFormatException Err) {
-				System.out.println("Error - Non-Numerical Character In Display");
-			}
-		}
-		if (chrPressed.equals("X")) {
-			try {
-			NumberStorage = Integer.parseInt(Display.getText());
-			Operation = "X";
-			Display.setText("");
-			}
-			catch(NumberFormatException Err) {
-				System.out.println("Error - Non-Numerical Character In Display");
-			}
-		}
-		if (chrPressed.equals("/")) {
-			try {
-			NumberStorage = Integer.parseInt(Display.getText());
-			Operation = "/";
-			Display.setText("");
-			}
-			catch(NumberFormatException Err) {
-				System.out.println("Error - Non-Numerical Character In Display");
-			}
-		}
+		
 		if (chrPressed.equals("=")) {
 			try {
 				if (Operation == "+") {
